@@ -18,10 +18,22 @@ public class EmpServiceImpl implements EmpService {
         return employees;
     }
 
+    // @Override
+    // public boolean DeleteEmp(Long id) {
+    //    employees.remove(id);
+    //    return true;
+    // }
+
     @Override
-    public boolean DeleteEmp(Long id) {
-       employees.remove(id);
-       return true;
+   public boolean DeleteEmp(Long id) {
+    for (Employee employee : employees) {
+        if (employee.getId().equals(id)) {
+            employees.remove(employee);
+            return true;
+        }
     }
+    return false; 
+  }
+
 
 }
