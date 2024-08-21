@@ -31,7 +31,7 @@ public class EmpController {
     }
 
     @DeleteMapping("employees/{id}")
-    public String DeleteEmp(@PathVariable Long id){
+    public String deleteEmp(@PathVariable Long id){
         if(empService.DeleteEmp(id))
             return "Deleted Successfully";
         return "Not Found"; 
