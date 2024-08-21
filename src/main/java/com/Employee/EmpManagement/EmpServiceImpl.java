@@ -20,7 +20,8 @@ public class EmpServiceImpl implements EmpService {
 
     @Override
     public boolean DeleteEmp(Long id) {
-       return employees.remove(id);
+       employees.remove(id);
+       return true;
     }
 
 }
